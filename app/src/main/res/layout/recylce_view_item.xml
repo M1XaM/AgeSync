@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/color_line"
+            android:layout_width="10dp"
+            android:layout_height="150dp"
+            android:background="@color/blue800"/>
+        <RelativeLayout
+            android:background="@drawable/border_sahpe"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_toEndOf="@id/color_line"
+            android:layout_marginEnd="20dp"
+            >
+
+            <TextView
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event name"
+                android:padding="10dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue800"/>
+                <RelativeLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/event_name"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10.10.2010"
+                        android:layout_above="@id/date_hr"
+                        android:textSize="24sp"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"/>
+
+                    <RelativeLayout
+                        android:id="@+id/date_hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@color/blue800" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/date_hr"
+                        android:text="10:00"
+                        android:layout_centerVertical="true"
+                        android:textSize="24sp"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"/>
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/event_name"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/date_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:inputType="textMultiLine"
+                    android:text="Locatia aa aaa aaa aaa aaa a aa aa a aaa aa "
+                    android:textSize="19dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

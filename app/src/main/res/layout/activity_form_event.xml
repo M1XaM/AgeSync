@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creare Formular"
+            android:textSize="30sp"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/blue800"
+            />
+
+        <RelativeLayout
+            android:id="@+id/title_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/blue800"
+            android:backgroundTint="@color/blue800"
+            />
+
+        <TextView
+            android:id="@+id/denumire_lbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Denumire eventului"
+            app:layout_constraintTop_toBottomOf="@id/title_line"
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/galbe"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/denumire_lbl"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:boxBackgroundColor="@color/gray400"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/start_date_lbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data de Începere"
+            app:layout_constraintTop_toBottomOf="@id/name_layout"
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/galbe"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_date_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/start_date_lbl"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Alegeți Data"
+            android:textSize="20dp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            />
+
+            <TextView
+                android:id="@+id/end_date_lbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data de Sfarsire"
+                app:layout_constraintTop_toBottomOf="@id/start_date_btn"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/galbe"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/end_date_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_lbl"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Alegeți Data"
+                android:textSize="20dp"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                />
+
+            <ToggleButton
+                android:id="@+id/toggle_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Online"
+                android:textOn="Online"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_btn"
+                android:layout_marginTop="30dp"
+                android:padding="15dp"
+                android:background="@color/toggle_color"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/ev_lbl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eveniment Online"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_btn"
+                app:layout_constraintEnd_toStartOf="@id/toggle_online"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="120dp"
+                android:textColor="@color/galbe"
+                android:padding="11dp"
+                />
+
+            <ToggleButton
+                android:id="@+id/toggle_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Offline"
+                android:textOn="Offline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_online"
+                android:layout_marginTop="30dp"
+                android:padding="15dp"
+                android:background="@color/toggle_color"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/ev_lbl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eveniment Ofline"
+                app:layout_constraintTop_toBottomOf="@+id/ev_lbl1"
+                app:layout_constraintEnd_toStartOf="@id/toggle_offline"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="120dp"
+                android:textColor="@color/galbe"
+                android:padding="11dp"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_online"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ev_lbl2">
+
+                <TextView
+                    android:id="@+id/ev_online_lbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Link"
+                    android:textColor="@color/galbe"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/link_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/gray400"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeWidth="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ev_online_lbl"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_offline"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_online"
+                >
+                <TextView
+                    android:id="@+id/ev_offline_lbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loc"
+                    android:textColor="@color/galbe"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/gray400"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeWidth="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ev_offline_lbl"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_description"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_offline"
+            >
+
+            <TextView
+                android:id="@+id/desc_lbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descriere"
+                android:textColor="@color/galbe"
+                android:textSize="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp" />
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="250dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/desc_lbl"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                android:layout_marginBottom="60dp">-->
+
+<!--            </com.google.android.material.textfield.TextInputEditText>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/desc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray400"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/desc_lbl">
+
+                <EditText
+                    android:id="@+id/desc_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:background="@null"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desc_layout"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Creați"
+                android:textSize="20sp"
+                android:padding="12dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
