@@ -1,0 +1,1 @@
+web gunicorn age_sync.wsgi:application --log-file -
