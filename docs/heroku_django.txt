@@ -1,0 +1,17 @@
+0. know git and init git repository
+0. know about virtual enviroment 
+1. make heroku account
+2. install heroku
+3. adjust Django project for heroku deployement:
+- pip install django-heroku
+- pip install dj_database_url
+4. add files:
+- requirements.txt (if not existed before)
+- Procfile (with: web gunicorn main_app.wsgi:application --log-file - )
+- runtime.txt (with: python-version)
+5. heroku create app (or smth like this)
+0. heroku link git to remote
+0. don't forget about DEBUG=True and SECRET_KEY
+6. git push heroku master
+7*. heroku logs [--tail]
+8*. heroku run ...[python manage.py shell]
